@@ -1,4 +1,3 @@
-import { View, Text } from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Icon } from '@rneui/base';
@@ -8,7 +7,6 @@ import AccountStack from './AccountStack';
 import FavoritesStack from './FavoritesStack';
 import RankingStack from './RankingStack';
 import SearchStack from './SearchStack';
-import AccountScreen from '../screens/account/AccountScreen';
 
 const Tab = createBottomTabNavigator();
 

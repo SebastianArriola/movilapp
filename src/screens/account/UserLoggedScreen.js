@@ -25,8 +25,8 @@ const UserLoginScreen = () => {
       />
       <Text style={styles.textName}>Juan Perez</Text>
     
-      <View style={styles.boxBottom}>
-      <Button title="CERRAR SESIÓN" onPress={goToLogOut} buttonStyle={styles.button} titleStyle={styles.textBottom}/>
+      <View style={styles.boxButton}>
+      <Button title="CERRAR SESIÓN" onPress={goToLogOut} buttonStyle={styles.button} titleStyle={styles.textButton}/>
       </View>
       </View>
 

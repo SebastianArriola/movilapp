@@ -4,6 +4,8 @@ import { stylesLogin } from './styles/stylesLoginScreen'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { screen } from '../../utils'
+import LoginForm from '../../components/Auth/Login/LoginForm'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 const LoginScreen = () => {
 
@@ -16,24 +18,14 @@ const LoginScreen = () => {
   }
 
   return (
-    <View style={stylesLogin.content}>
+    <KeyboardAwareScrollView style={stylesLogin.content}>
       <Image source={require('../../../assets/img/algaboIconPicker.png')} style={stylesLogin.image}/>
-      <Input
-      placeholder='Usuario'
-      inputContainerStyle={stylesLogin.input}
-      />
-      <Input
-      placeholder='Contraseña'
-      inputContainerStyle={stylesLogin.input}
-      secureTextEntry={true}
-      />
-      <View style={stylesLogin.boxButtonLogin}>
-      <Button title="INICIAR SESIÓN" onPress={()=>{}}buttonStyle={stylesLogin.button} titleStyle={stylesLogin.textButton}/>
+      <View style={stylesLogin.boxInput}>
+
+        <LoginForm/>
+
       </View>
-      <View style={stylesLogin.boxButtonRegister}>
-      <Button title="REGISTRARSE" onPress={navToApp}buttonStyle={stylesLogin.button} titleStyle={stylesLogin.textButton}/>
-      </View>
-    </View>
+    </KeyboardAwareScrollView>
   )
 }
 
